@@ -58,9 +58,6 @@ The researchers tested ToT on problems specifically chosen because they were **d
 | Creative Writing | Avg. coherence (0‑10) | **6.9** | **7.6** |
 | Mini Crossword | Word‑level accuracy | **15 %** | **60 %** |
 
-*Numbers taken from the original paper’s GPT‑4 experiments; higher is better.*
-
-
 The results highlighted the power of ToT's deliberate approach. For example, on the **Game of 24**, while GPT-4 using standard CoT solved only **4%** of the problems, ToT with GPT-4 achieved a **74%** success rate. Even a simpler version of ToT (breadth=1) was significantly better than CoT. CoT often failed very early on the Game of 24 task, showing the problem with its left-to-right decoding.
 
 For **Creative Writing**, passages generated with ToT were rated as significantly **more coherent** by both automatic evaluation and human judgment compared to CoT. ToT helps here by generating and selecting better overall plans before writing.
@@ -79,6 +76,8 @@ In **Mini Crosswords**, where problems are deeper and require more complex searc
 | **1‑A** | {4, 4, 10} | ① 10 − 4 = 6  ② 4 × 10 = 40  | sure ✓  maybe ?| **①** |
 | **2‑A** | {4, 6} | ① 4 × 6 = 24  ② 6 ÷ 4 = 1.5 | sure ✓  impossible ✗ | **①** |
 | **3‑A (leaf)** | {24} | — | goal reached | output equation |
+
+![Tree of Thoughts visualization showing branching paths of reasoning and evaluation](./gameof24.png "Tree of Thoughts visualization showing branching paths of reasoning and evaluation")
 
 Putting the kept thoughts together gives the final solution:
 

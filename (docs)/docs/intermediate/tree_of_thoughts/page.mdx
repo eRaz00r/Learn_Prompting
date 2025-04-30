@@ -4,7 +4,7 @@ export const metadata = {
   description: "Learn about Tree of Thoughts (ToT), a framework that encourages LLMs to explore multiple reasoning paths for complex problems.",
 };
 
-##🟢  Tree of Thoughts (ToT): a Smarter Way to Prompt Large Language Models
+## 🟢  Tree of Thoughts (ToT): a Smarter Way to Prompt Large Language Models
 
 You know how sometimes you need to solve a really tricky problem, not just one where the answer pops into your head immediately? You might brainstorm different ideas, maybe try one path, realize it's a dead end, and then backtrack to try another approach. This kind of careful, deliberate thinking is something humans do all the time.
 
@@ -87,6 +87,7 @@ Putting the kept thoughts together gives the final solution:
 ```
 
 *What happened?*
+
 1. **Branching early** the model explored two promising first moves instead of locking in one.
 2. **Heuristic verdicts** (“sure / maybe / impossible”) pruned obviously bad paths.
 3. **Beam search** followed the most promising branch to depth 3, producing a correct equation in only 7 thought evaluations—far fewer than brute‑forcing every possibility.
@@ -121,4 +122,10 @@ While using ToT requires more computation (more prompts to generate and evaluate
 5. **Not a Silver Bullet:** For simple Q&A or text generation, ToT is overkill; reserve it for puzzles, planning, and tasks where an early mis‑step is fatal.
 
 So, next time you're trying to solve a tough problem by exploring different ideas and weighing your options, you can think of it as building your own "Tree of Thoughts" – just like these advanced language models are learning to do.
+
+---
+
+### References
+
+[^1]: Yao, S., Yu, D., Zhao, J., Shafran, I., Griffiths, T. L., Cao, Y., & Narasimhan, K. (2023). **Tree of Thoughts: Deliberate Problem Solving with Large Language Models.** *Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS 2023).*
 
